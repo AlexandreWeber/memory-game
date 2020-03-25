@@ -58,6 +58,10 @@ const heroes = [{
 
 let card1 = {};
 let card2 = {};
+let counter = 0;
+let movements = 0;
+let interval = undefined;
+let okCounter = 0;
 
 function onLoad() {
     this.generateGame(heroes);
@@ -67,6 +71,12 @@ function onLoad() {
 
 function generateGame(heroes) {
     let htmlContent = '';
+    counter = 0;
+    movements = 0;
+    okCounter = 0;
+    clearInterval(interval);
+    clearMovements();
+    
     heroes = Game.shuffle(heroes);
 
     heroes.map((heroe) => {
@@ -78,6 +88,8 @@ function generateGame(heroes) {
     this.hideHeroes();
 
     this.handleClick();
+
+    this.startTimer();
 }
 
 function hideHeroes() {
@@ -99,6 +111,8 @@ function handleClick() {
                     || event.target.src.indexOf("default") === -1) {
                     return;
                 }
+            
+                this.incrmentMovements();
 
                 const h = heroes.find(heroe => heroe.id === +event.target.id)
                 event.target.src = h.img;
@@ -117,10 +131,13 @@ function handleClick() {
 
                 if (card1.id && card2.id) {
                     if (card1.name === card2.name) {
-                        // alert('aeeee');
                         card1 = {};
                         card2 = {};
-                        // To Do
+                        okCounter += 1;
+
+                        if (okCounter === 6) {
+                            this.stopGame();
+                        }
                     } else if (card2.name) {
                         setTimeout(() => {
                             this.hideHeroe(card1.id);
@@ -132,6 +149,31 @@ function handleClick() {
                 }
             })
         });
+}
+
+function startTimer() {
+    interval = setInterval(() => {
+        document.getElementById('timer').innerHTML = counter;
+
+        counter++;
+    }, 1000);
+}
+
+function stopGame() {
+    counter = 0;
+    movements = 0;
+    okCounter = 0;
+    clearInterval(interval);
+}
+
+function incrmentMovements() {
+    movements += 1;
+
+    document.getElementById('movements').innerHTML = movements;
+}
+
+function clearMovements() {
+    document.getElementById('movements').innerHTML = 0;
 }
 
 window.onload = onLoad;

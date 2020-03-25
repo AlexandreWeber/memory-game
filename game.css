@@ -24,7 +24,6 @@
     margin-top: 15px;
     margin-bottom: 5px;
     font-size: 24px;
-    font-weight: ;
 }
 
 .title {
@@ -37,8 +36,14 @@ body, .card {
     background-color: darkgray !important;
 }
 
-a {
-    text-decoration: none;
+.status {
+    display: flex;
+    justify-content: center;
     color: white;
-    font-size: 24px;
+    font-size: 36px;
+    padding-right: 10px;
+}
+
+#timer {
+    padding-right: 15px;
 }
