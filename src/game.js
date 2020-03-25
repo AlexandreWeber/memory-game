@@ -1,24 +1,12 @@
 class Game {
-	static getHtmlContent(heroe, index) {
-		let htmlContent = '';
-
-		if (this.isBegin(index)) {
-			htmlContent += `<div class="row">`;
-		}
-
-		htmlContent += `
-			<div class="col-2">
+	static getHtmlContent(heroe) {
+		return `
+			<div class="col-4 col-md-3">
 				<div class="card memory-card">
 					<img id="${heroe.id}" src="${heroe.img}" class="card-img-top"/>
 				</div>
 			</div>
 		`;
-
-		if (this.isEnd(index)) {
-			htmlContent += `</div>`
-		}
-
-		return htmlContent;
 	}
 
 	static updateContent(htmlContent) {
@@ -26,15 +14,6 @@ class Game {
 
 		content.innerHTML = htmlContent	;
 	}
-
-	static isBegin(index) {
-		return index === 0 || index === 4 || index == 8;
-	}
-
-	static isEnd(index) {
-		return index === 3 || index === 7 || index == 11;
-	}
-
 
 	static shuffle(heroes) {
 		const newHeroes = [];

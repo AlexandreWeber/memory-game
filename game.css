@@ -1,21 +1,44 @@
 .card-img-top {
-	width: 150px;
+    width: 150px;
+}
+
+@media (max-width: 400px) {
+    .card-img-top {
+        width: 120px;
+    }
+
+    .game {
+        padding-top: 25px;
+    }
 }
 
 .memory-card {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 25px;
-	border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border: none;
 }
 
 .btn-success {
-	margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: ;
 }
 
+.title {
+    text-align: center;
+    color: white !important;
+    margin-bottom: 20px;
+}
 
+body, .card {
+    background-color: darkgray !important;
+}
 
-#content, html {
-	height: 100% !important;
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
 }
