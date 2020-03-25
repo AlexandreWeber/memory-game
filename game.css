@@ -1,0 +1,21 @@
+.card-img-top {
+	width: 150px;
+}
+
+.memory-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 25px;
+	border: none;
+}
+
+.btn-success {
+	margin-right: 5px;
+}
+
+
+
+#content, html {
+	height: 100% !important;
+}
