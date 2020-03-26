@@ -72,7 +72,7 @@ function handleClick() {
 						gameState.card2 = {};
 						gameState.okCounter += 1;
 
-						if (gameState.okCounter === 6) {
+						if (gameState.okCounter === 12) {
 							this.stopGame();
 						}
 					} else if (gameState.card2.name) {
