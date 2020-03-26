@@ -2,9 +2,9 @@
     width: 150px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .card-img-top {
-        width: 120px;
+        width: 70px;
     }
 
     .game {
@@ -46,4 +46,11 @@ body, .card {
 
 #timer {
     padding-right: 15px;
+}
+
+.footer {
+	height: 50px;
+	width: 100%;
+	background-color: tomato;
+	color: white;
 }
