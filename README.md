@@ -5,7 +5,7 @@ Access the game on [https://alexandreweber.github.io/memory-game/](https://alexa
 
 <img src="./assets/screenshot.png" alt="Initial game screen" width="300"/>
 
-At the moment you access the game will start automatically. On the top of the screen it will be displayed the time and the count of the movements you are doing during the game.
+At the moment you access the game it will start automatically. On the top of the page will be displayed the time and the count of the movements you are doing during the game.
 
 By the end of the game after you match all the heroes see your result in time (seconds) and the number of movements. 
 
